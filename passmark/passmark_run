@@ -221,7 +221,7 @@ run_passmark()
 			#
 			# Ubuntu check
 			#
-			uname -a | grep  -q Ubuntu
+			uname -a | grep  -q -E 'Ubuntu|tegra'
 			if [ $? -eq 0 ]; then
 				echo ubuntu >> /tmp/dave
 				if [[ ! -f /usr/lib64 ]]; then
