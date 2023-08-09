@@ -126,7 +126,8 @@ produce_report()
 			echo "${line}" >> $summary_file
 		done < "results_all_1.yml"
 		echo Ran > test_results_report
-
+		
+		rm -f results.csv 	
 		located=0
 		while IFS= read -r line
 		do
